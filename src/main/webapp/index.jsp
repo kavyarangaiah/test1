@@ -76,8 +76,8 @@
 <body>
 
 <header>
-  <h1>Hi, Welcome to My Portfolio 🚀</h1>
-  <p>DevOps Engineer | CI/CD | Kubernetes | Cloud Enthusiast</p>
+  <h1>Hi, Welcome to My Portfolio</h1>
+  <p>SRE | DevOps Engineer | CI/CD | Kubernetes | Cloud Enthusiast</p>
 </header>
 
 <div class="section">
@@ -89,8 +89,15 @@
       Git, Jenkins, Maven, Docker, and Kubernetes deployed on AWS EKS.
     </p>
 
-    <h3>Deployment Time:</h3>
-    <p><strong><%= new java.util.Date() %></strong></p>
+<%
+    java.time.ZonedDateTime istTime =
+        java.time.ZonedDateTime.now(java.time.ZoneId.of("Asia/Kolkata"));
+    java.time.format.DateTimeFormatter formatter =
+        java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss a");
+%>
+
+<h3>Deployment Time (IST):</h3>
+<p><strong><%= istTime.format(formatter) %></strong></p>
 
     <a href="https://www.linkedin.com/in/kavya-r-b2a29417b/"
        target="_blank"
@@ -101,7 +108,7 @@
 </div>
 
 <footer>
-  © <%= java.time.Year.now() %> Kavya | Built with ❤️ using DevOps
+  © <%= java.time.Year.now() %> Kavya | Website built using DevOps
 </footer>
 
 </body>
