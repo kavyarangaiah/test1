@@ -190,8 +190,9 @@ kubectl get nodes
 
 **Set Github**
 1. Go to https://github.com/kavyarangaiah/test1 and fork it to your Git account <br/>
-2. To run Pipeline Go to Jenkins UI, create a new job, give name > select pipeline > OK <br/>
-3. Once pipeline is selected, go to the job > configure > scroll down and under pipeline script, copy the below code and apply > save <br/>
+2. To edit code, go to src/main/webapp > WEB-INF > index.jsp
+3. To run Pipeline Go to Jenkins UI, create a new job, give name > select pipeline > OK <br/>
+4. Once pipeline is selected, go to the job > configure > scroll down and under pipeline script, copy the below code and apply > save <br/>
 
 - **Stage-1 : Clone Git Repo** <br/> 
 - **Stage-2 : Maven Build** <br/>
